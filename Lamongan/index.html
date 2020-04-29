@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="icon" href="icon/grad1.png">
+  <title>Dinas Pariwisata dan Kebudayaan Lamongan</title>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="./js/jquery-1.10.2.min.js"></script>
+  <link rel="stylesheet" href="./js/jquery-ui.min.css"/>
+  <script src="./js/jquery-ui.min.js"></script>
+  <div class="calendar_block">
+    <div class="calendar"></div>
+  </div>
+  <script>
+    $(".calendar").datepicker(
+    {
+      firstDay: 1,
+      dayNamesMin: [ "S","M", "T", 
+      "W", "T", "F", "S" ]
+    });
+  </script>
+  
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+  <script src="jquery-3.5.0.min.js"></script>
+  <script type="text/javascript">
+    $(window).on('scroll', function(){
+      if ($(window).scrollTop()){
+        $('nav').addClass('black');
+      }
+      else
+      {
+        $('nav').removeClass('black');
+      }
+    })
+  </script>
+</head>
+
+<body>
+
+  <nav class="navbar fixed-top navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="Image\logo.png" alt="">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown" href="#" id="navbarDropdownProfil" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              PROFILE
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="portfolio-1-col.html">Profil</a>
+              <a class="dropdown-item" href="portfolio-2-col.html">Sejarah Disparbud</a>
+              <a class="dropdown-item" href="portfolio-3-col.html">Struktur Organisasi</a>
+              <a class="dropdown-item" href="portfolio-4-col.html">Visi Misi</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              SAKIP
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="blog-home-1.html">SAKIP 2018</a>
+              <a class="dropdown-item" href="blog-home-2.html">SAKIP 2019</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              PPID
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="full-width.html">PPID 2018</a>
+              <a class="dropdown-item" href="sidebar.html">PPID 2019</a>
+              <a class="dropdown-item" href="faq.html">PPID 2020</a>
+            </div>
+          </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              GALERY
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="full-width.html">Galery Pariwisata</a>
+              <a class="dropdown-item" href="sidebar.html">Galery Kebudayaan</a>
+              <a class="dropdown-item" href="faq.html">Galery Pemasaran</a>
+            </div>
+          </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              DATA SEKTORAL
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="full-width.html">DATA KUNJUNGAN WISATA 2015-2019 </a>
+            </div>
+          </li>
+
+          <a href="https://web.facebook.com/disparbud.lamongan.9?_rdc=1&_rdr" target='_blank' class="Ico"><img src="icon\fesbuk.png" alt="..." height="15" width="15"></a>
+          <a href="https://www.instagram.com/disparbudlamongan/" target='_blank' class="Ico2"><img src="icon\insta.png" alt="..." height="15" width="15"></a>
+          <a href="#" class="Ico3"><img src="icon\gmail.png" alt="..." height="15" width="15"></a>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Image\Slide1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Image\slide2.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+     <main>
+      	<section class="section-popular-content" id="#">
+          <div class="container-f">
+            <div class="col-3 col-md2 detail">
+              <img src="Image\kotak.png" align="left" width="20" height="20" class="gmb">
+              <h3 align="right">DINAS PARIWISATA DAN KEBUDAYAAN KABUPATEN LAMONGAN<h3>
+            </div>
+      		</div>
+      	</section>
+      </main>
+      <br>
+
+    <!-- Portfolio Section -->
+    <div class="bintang" align="center">
+      <img src="Image\bintang.png" width="35" height="15">
+    </div>
+    <br>
+    <h5 align="center"> BERITA DISPARBUD </h5>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card-deck">
+            <div class="card">
+              <a href="Apel.html"><img src="Image\f3.jpg" class="card-img-top"></a>
+              <div class="card-body">
+                <a href="Apel.html"><h5 class="card-title">APEL PAGI DISPARBUD LAMONGAN</h5></a>
+                <p class="card-text">Senin Tanggal 2 Maret 2020, bertempat di halaman Kantor Dinas Pariwisata dan kebudayaan kabupaten lamongan  telah dilaksanakan kegiatan Apel Pagi.</p>
+              </div>
+            </div>
+            <div class="card">
+              <a href="Duta.html"><img src="Image\f2.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="Duta.html"><h5 class="card-title">DUTA WISATA CILIK LAMONGAN 2020</h5></a>
+                <p class="card-text">Duta wisata cilik Lamongan 2020 juara 1 putra ferdinand naufal syakhi- SD Ar-Roudloh Sekaran Juara 1 putri Roro Putri Titian Asih- SDN II...</p>
+              </div>
+            </div>
+            <div class="card">
+              <a href="Nyanggring.html"><img src="Image\f1.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="Nyanggring.html"><h5 class="card-title">NYANGGRING</h5></a>
+                <p class="card-text">Wisata Budaya Khas Lamongan ini merupakan upacara ritual tradisional yang dilaksanakan masyarakat di Desa Tlemang, Kecamatan Ngimbang,...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-deck">
+            <div class="card">
+              <a href="HUT.html"><img src="Image\f7.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="HUT.html"><h5 class="card-title">MEMPERINGATI HUT- KOPRI KE - 48 TAHUN 2019</h5></a>
+                <p class="card-text">Dalam Rangka Memperingati Hari Ulang Tahun Kopri Yang ke- 48 Tahun 2019, Disparbud Lamingan mempersiapkan grup Paduan Suara untuk memeriahkan...</p>
+              </div>
+            </div>
+            <div class="card">
+              <a href="piagam.html"><img src="Image\f8.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="piagam.html"><h5 class="card-title">PIAGAM PENGHARGAAN PEMERINTAH KABUPATEN LAMONGAN TAHUN 2019</h5></a>
+                <p class="card-text">Gubernur Jawa Timur memberikan Piagam Penghargaan kepada Pemerintah Kabupaten Lamongan Atas Komitmen dan Kepeduliannya yang Tinggi dalam...</p>
+              </div>
+            </div>
+            <div class="card">
+              <a href="Tayub.html"><img src="Image\f9.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="Tayub.html"><h5 class="card-title">FESTIVAL BEKSAN TAYUB LAMONGAN PIALA BUPATI CUP JILID V TAHUN 2019</h5></a>
+                <p class="card-text">Festival Beksan Tayub Lamongan Piala Bupati Cup Jilid V hari sabtu tanggal 23 Nopember 2019, di Bumi perkemahan Sono Keling, Desa Pule,...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-deck">
+            <div class="card">
+              <a href="Tari.html"><img src="Image\f10.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="Tari.html"><h5 class="card-title">PELATIHAN PELATIH TARI TRADISIONAL DAN MODERN DISPARBUD KAB. LAMONGAN 2019</h5></a>
+                <p class="card-text">Pelatihan Pelatih Tari Tradisional dan Modern Tingkat TK. Tanggal 22-23 Oktober di Aula Disparbud Lamongan Tahun 2019, sangat...</p>
+              </div>
+            </div>
+            <div class="card">
+              <a href="Senditari.html"><img src="Image\f11.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="Senditari.html"><h5 class="card-title">"SENDITARI JAKAMADA" DI ANJUNGAN JAWA TIMUR TAMAN MINI INDONESIA INDAH 21 SEPTEMBER 2019</h5></a>
+                <p class="card-text">Pagelaran Seni Sendra Tari Jakamada di Anjungan Jawa Timur Taman Mini Indonesia Indah Tanggal 21 September 2019, Acara ini Dihadiri sekaligus...</p>
+              </div>
+            </div>
+            <div class="card">
+              <a href="Tempo.html"><img src="Image\f12.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="Tempo.html"><h5 class="card-title">LAMONGAN TEMPOE DOLOE 2019</h5></a>
+                <p class="card-text">Lamongan Tempoe Doloe Dinas Pariwisata dan Kebudayaan Kabupaten lamongan Tanggal 6-7 september 2019, bertempat di sekitar area Alon - alon...</p>
+              </div>
+            </div>
+          </div>  
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-deck">
+            <div class="card">
+              <a href="Final.html"><img src="Image\f13.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="Final.html"><h5 class="card-title">GRAND FINAL PEMILIHAN DUTA WISATA YAK YUK LAMONGAN 2019</h5></a>
+                <p class="card-text">Acara ini Dihadiri sekaligus dibuka oleh Bupati Kabupaten lamongan, Bapak H. Fadeli S.H, M.M beserta Jajaran Forkopimda Lamongan. turut hadir...</p>
+              </div>
+            </div>
+            <div class="card">
+              <a href="Final2.html"><img src="Image\f14.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="Final2.html"><h5 class="card-title">SAKSIKAN GRAND FINAL YAK YUK LAMONGAN 2019</h5></a>
+                <p class="card-text">Saksikan Grand Final Yak yuk Lamingan tanggal 30 September 2019 di alun-alun lamongan,</p>
+              </div>
+            </div>
+            <div class="card">
+              <a href="Pemilihan.html"><img src="Image\f15.jpg" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <a href="Pemilihan.html"><h5 class="card-title">PEMILIHAN YAK YUK 2019</h5></a>
+              </div>
+            </div>
+          </div> 
+        </div>
+
+        <div class="carousel-item">
+          <div class="card-deck">
+            <div class="card">
+              <img src="Image\f16.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">PENDAFTARAN YAKYUK LAMONGAN 2019</h5>
+              </div>
+            </div>
+            <div class="card">
+              <img src="Image\f17.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">KUNJUNGAN DPRD KABUPATEN LUMAJANG KE DISPARBUD LAMONGAN TAHUN 2019</h5>
+                <p class="card-text">kunjungan DPRD Kabupaten Lumajang ke Disparbud lamongan disambut dengan baik, dengan Berkunjung ke Dinas Pariwisata Kabupaten lamongan</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="Image\f18.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">AYO SUKSESKAN PEKAN OLAHRAGA PROVINSI(PORPROV) VI JATIM 2019</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    
+    <br>
+    <div class="bintang" align="center">
+      <img src="Image\bintang.png" width="35" height="15">
+    </div>
+    <br>
+    <h5 align="center"> WISATA LAMONGAN </h5>
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="content-video">
+          <iframe width="350" height="200" src="https://www.youtube.com/embed/vuyBNsbYZfI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="content-video">
+          <iframe width="350" height="200" src="https://www.youtube.com/embed/kre5XmZOvYE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="content-video">
+          <iframe width="350" height="200" src="https://www.youtube.com/embed/zRk9fHKxPMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="col mb-3">
+        <div class="bintang" align="center">
+          <img src="Image\bintang.png" width="30" height="10">
+        </div>
+        <br>
+        <h5 align="center"> GALERI KEBUDAYAAN </h5>
+        <div class="card">
+          <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="14"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="15"></li>
+            </ol>
+            <div class="carousel-inner rounded-left">
+              <div class="carousel-item active">
+                <img src="Image\c1.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c2.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c3.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c4.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c5.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c6.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c7.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c8.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c9.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c10.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c11.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c12.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c13.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c14.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c15.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c16.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c17.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\c18.jpg" class="d-block w-100">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-3">
+        <div class="bintang" align="center">
+          <img src="Image\bintang.png" width="30" height="10">
+        </div>
+        <br>
+        <h5 align="center"> GALERI PEMASARAN </h5>
+        <div class="card">
+          <div id="carouselExample" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExample" data-slide-to="1"></li>
+              <li data-target="#carouselExample" data-slide-to="2"></li>
+              <li data-target="#carouselExample" data-slide-to="3"></li>
+              <li data-target="#carouselExample" data-slide-to="4"></li>
+              <li data-target="#carouselExample" data-slide-to="5"></li>
+              <li data-target="#carouselExample" data-slide-to="6"></li>
+              <li data-target="#carouselExample" data-slide-to="7"></li>
+              <li data-target="#carouselExample" data-slide-to="8"></li>
+              <li data-target="#carouselExample" data-slide-to="9"></li>
+              <li data-target="#carouselExample" data-slide-to="10"></li>
+              <li data-target="#carouselExample" data-slide-to="11"></li>
+              <li data-target="#carouselExample" data-slide-to="12"></li>
+              <li data-target="#carouselExample" data-slide-to="13"></li>
+              <li data-target="#carouselExample" data-slide-to="14"></li>
+            </ol>
+            <div class="carousel-inner rounded-left">
+              <div class="carousel-item active">
+                <img src="Image\d1.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d2.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d3.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d4.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d5.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d6.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d7.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d8.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d9.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d10.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d11.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d12.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d13.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d14.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\d15.jpg" class="d-block w-100">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-3">
+        <div class="bintang" align="center">
+          <img src="Image\bintang.png" width="30" height="10">
+        </div>
+        <br>
+        <h5 align="center"> GALERI PARIWISATA </h5>
+        <div class="card">
+          <div id="carouselExample1" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExample1" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExample1" data-slide-to="1"></li>
+              <li data-target="#carouselExample1" data-slide-to="2"></li>
+              <li data-target="#carouselExample1" data-slide-to="3"></li>
+              <li data-target="#carouselExample1" data-slide-to="4"></li>
+              <li data-target="#carouselExample1" data-slide-to="5"></li>
+              <li data-target="#carouselExample1" data-slide-to="6"></li>
+              <li data-target="#carouselExample1" data-slide-to="7"></li>
+              <li data-target="#carouselExample1" data-slide-to="8"></li>
+              <li data-target="#carouselExample1" data-slide-to="9"></li>
+              <li data-target="#carouselExample1" data-slide-to="10"></li>
+              <li data-target="#carouselExample1" data-slide-to="11"></li>
+              <li data-target="#carouselExample1" data-slide-to="12"></li>
+              <li data-target="#carouselExample1" data-slide-to="13"></li>
+              <li data-target="#carouselExample1" data-slide-to="14"></li>
+            </ol>
+            <div class="carousel-inner rounded-left">
+              <div class="carousel-item active">
+                <img src="Image\e1.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e2.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e3.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e4.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e5.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e6.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e7.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e8.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e9.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e10.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e11.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e12.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e13.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e14.jpg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="Image\e15.jpg" class="d-block w-100">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.1100378388937!2d112.40564261402203!3d-7.113245194863232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77f0b7817b7809%3A0xc1af73b8bf4dc026!2sDinas%20Pariwisata%20dan%20Kebudayaan%20Kabupaten%20Lamongan!5e0!3m2!1sid!2sid!4v1587194664287!5m2!1sid!2sid" width="1150" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12609.73108660754!2d-122.47279800000001!3d37.803331!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808586e6302615a1%3A0x86bd130251757c00!2sStorey%20Ave%2C%20San%20Francisco%2C%20CA%2094129!5e0!3m2!1sid!2sus!4v1587688614277!5m2!1sid!2sus" width="1150" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+<footer>
+  <img src="Image\footer.jpg" alt="..." width="1150" height="500">
+  <div class="card-img">
+    <div class="row">
+      <div class="col">
+        <h5 class="judul"> KANTOR </h5>
+        <br>
+        <p class="text">Jl. Sunan Giri No.1,</p>
+        <p class="text">Tumenggungbaru, Sukorejo,</p>
+        <p class="text">Kec. Lamongan, Kab. Lamongan Jatim</p> 
+        <p class="text">62215</p>
+        <p class="text">Telp: (0322) 311919</p>         
+        <p class="text">Email: disparbud@lamongankab.go.id</p> 
+        <p class="text">Copyright 2018 Dinas Pariwisata dan Kebudayaan</p>
+        <p class="text">Kabupaten Lamongan</p>
+      </div>
+      <div class="col">
+        <h5 class="judul">BOOKMARKS</h5>
+        <br>
+        <p class="text">Disparbud Lamongan</p>
+        <p class="text">Disbudpar Prov Jatim</p>
+        <p class="text">indonesia Travel</p> 
+        <p class="text">kementrian pariwisata</p>
+        <p class="text">Pemerintah Kab lamongan</p>         
+        <p class="text">lamongantourism</p> 
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+</footer>
+</html>
