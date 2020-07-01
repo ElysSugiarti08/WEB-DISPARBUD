@@ -42,7 +42,7 @@ if( isset($_POST["ubah"]) ) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    Dasbor Admin - Profile
+    Profile User
   </title>
   <!-- Favicon -->
   <link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -64,7 +64,7 @@ if( isset($_POST["ubah"]) ) {
       </button>
       <!-- Brand -->
       <a class="navbar-brand pt-0" href="index.php">
-      <div><h2 class="text-primary">DASBOR CUSTOMER</h2></div>
+      <div><h2 class="text-primary">DASHBOARD USER</h2></div>
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">

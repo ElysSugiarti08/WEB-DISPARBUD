@@ -15,7 +15,7 @@ $session = $_SESSION["username"];
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    Dasbor Customer
+    Dashboard User
   </title>
   <!-- Favicon -->
   <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -37,7 +37,7 @@ $session = $_SESSION["username"];
       </button>
       <!-- Brand -->
       <a class="navbar-brand pt-0" href="index.php">
-      <div><h2 class="text-primary">DASBOR CUSTOMER</h2></div>
+      <div><h2 class="text-primary">DASHBOARD USER</h2></div>
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
@@ -102,7 +102,7 @@ $session = $_SESSION["username"];
           </li>
           <li class="nav-item">
             <a class="nav-link " href="./profile.php">
-              <i class="ni ni-single-02 text-yellow"></i> User profile
+              <i class="ni ni-single-02 text-yellow"></i> User Profile
             </a>
           </li>
         </ul>
