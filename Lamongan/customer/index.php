@@ -1,6 +1,18 @@
 <?php
 session_start();
 
+require 'functions.php';
+
+if( isset($_POST["komentar"]) ) {
+
+    if( komentar($_POST) > 0 ) {
+        echo "<script>
+                alert('komentar baru berhasil ditambahkan!');
+            </script>";
+    } else {
+        echo mysqli_error($conn);
+    }
+} 
 if( !isset($_SESSION["login"]) ) {
   header("Location: ../login.php");
   exit;
@@ -157,18 +169,48 @@ $session = $_SESSION["username"];
     </nav>
     <!-- End Navbar -->
     <!-- Header -->
-  
-    <div class="container-fluid mt--7">
+
+    <div class="header pb-6 pt-3 pt-lg-5 d-flex align-items-center" style="min-height: 300px; background-size: cover; background-position: center top;">
+      <!-- Mask -->
+      <span class="mask bg-gradient-default opacity-7"></span>
+      <!-- Header container -->
+      <div class="container-fluid d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-12 col-md-10">
+            <h4 class="display-2 text-white">Welcome, <?php echo  $_SESSION["username"]; ?>!</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="container-fluid mt--7">
       <div class="row">
-        <div class="col-xl-12 mb-8 mb-xl-0">
-          <div class="card bg-white shadow">
-            <div class="card-header bg-transparent">
+        <div class="col">
+          <div class="card shadow">
+          <div class="card-header bg-white border-0">
               <div class="row align-items-center">
-                <div class="col">
-                  <h1 class="text-gradient-default mb-0 text-center">Selamat Datang, <?php echo  $_SESSION["username"]; ?></h1>
-                  <h4 class="text-gradient-default mb-0 text-center">Selamat datang di dasbor DISPARBUD LAMONGAN</h4>
+                <div class="col-8">
+                  <h3 class="mb-0">Sampaikan Komentarmu</h3>
                 </div>
               </div>
+            </div>
+            <div class="card-body">
+              <form method="post">
+                <input type="hidden" name="id" value="<?= $komentar["isi_komen"]; ?>">
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <textarea style="resize:none;width:1100px;height:150px;" type="text" id="isi_komen" class="form-control form-control-alternative" name="isi_komen" placeholder="Isi Komentar" required value="<?= $komentar["isi_komen"]; ?>"></textarea>
+                      </div>
+                      <div class="card-footer py-4">
+                  <div class="col-12 text-right">
+                    <button class="btn btn-bg btn-primary" type="submit" name="kirim">Kirim</button>
+                  </div>
+                </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -178,7 +220,7 @@ $session = $_SESSION["username"];
         <div class="row align-items-center justify-content-xl-between">
           <div class="col-xl-6">
             <div class="copyright text-center text-xl-left text-muted">
-              &copy; 2020 <a href="../index.html" class="font-weight-bold ml-1" target="_blank">DISPARBUD LAMONGAN</a>
+              &copy; 2020 <a href="../index.php" class="font-weight-bold ml-1" target="_blank">DISPARBUD LAMONGAN</a>
             </div>
           </div>
         </div>
