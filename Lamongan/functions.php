@@ -49,6 +49,13 @@ function registrasi($data) {
     return mysqli_affected_rows($conn);
 }
 
+function hapuskomen($id) {
+    global $conn;
+
+    mysqli_query($conn, "DELETE FROM komentar WHERE id_komen = $id");
+
+    return mysqli_affected_rows($conn);
+}
 
 
 function hapususer($id) {
@@ -58,9 +65,6 @@ function hapususer($id) {
 
     return mysqli_affected_rows($conn);
 }
-
-
-
 
 function ubahuser($data) {
     global $conn;
