@@ -7,6 +7,7 @@ if( !isset($_SESSION["login"]) ) {
 }
 $session = $_SESSION["username"];
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -133,7 +134,7 @@ $session = $_SESSION["username"];
                   <img alt="Image placeholder" src="./assets/img/theme/user.png">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-black font-weight-bold"><?php echo  $_SESSION["username"]; ?></span>
+                  <span class="mb-0 text-sm  font-weight-bold"><?php echo  $_SESSION["username"]; ?></span>
                 </div>
               </div>
             </a>
@@ -157,28 +158,47 @@ $session = $_SESSION["username"];
     </nav>
     <!-- End Navbar -->
     <!-- Header -->
-    <div class="header pb-8 pt-5 pt-lg-4 d-flex align-items-center" style="min-height: 20px; background-size: cover; background-position: center top;">
+
+    <div class="header pb-6 pt-3 pt-lg-5 d-flex align-items-center" style="min-height: 300px; background-size: cover; background-position: center top;">
       <!-- Mask -->
-      <span class="mask bg-gradient-default opacity-8"></span>
+      <span class="mask bg-gradient-default opacity-7"></span>
       <!-- Header container -->
       <div class="container-fluid d-flex align-items-center">
         <div class="row">
-          <div class="col-lg-7 col-md-10">
+          <div class="col-lg-12 col-md-10">
+            <h4 class="display-2 text-white">Welcome, <?php echo  $_SESSION["username"]; ?>!</h4>
           </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid mt--5">
+    <div class="container-fluid mt--7">
       <div class="row">
-        <div class="col-xl-12 mb-8 mb-xl-0">
-          <div class="card bg-white shadow">
-            <div class="card-header bg-transparent">
+        <div class="col">
+          <div class="card shadow">
+          <div class="card-header bg-white border-0">
               <div class="row align-items-center">
-                <div class="col">
-                  <h1 class="text-gradient-default mb-0 text-center">Selamat Datang, <?php echo  $_SESSION["username"]; ?></h1>
-                  <h4 class="text-gradient-default mb-0 text-center">Selamat Datang di dashboard DISPARBUD LAMONGAN</h4>
+                <div class="col-8">
+                  <h3 class="mb-0">Sampaikan Komentarmu</h3>
                 </div>
               </div>
+            </div>
+            <div class="card-body">
+              <form method="post" action="tambah_aksi.php">
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <textarea style="resize:none;width:1100px;height:150px;" type="text" class="form-control form-control-alternative" name="isi" placeholder="Isi Komentar"></textarea>
+                      </div>
+                      <div class="card-footer py-4">
+                  <div class="col-12 text-right">
+                    <button class="btn btn-bg btn-primary" type="submit" name="kirim">Kirim</button>
+                  </div>
+                </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -188,7 +208,7 @@ $session = $_SESSION["username"];
         <div class="row align-items-center justify-content-xl-between">
           <div class="col-xl-6">
             <div class="copyright text-center text-xl-left text-muted">
-              &copy; 2020 <a href="../index.html" class="font-weight-bold ml-1" target="_blank">DISPARBUD LAMONGAN</a>
+              &copy; 2020 <a href="../index.php" class="font-weight-bold ml-1" target="_blank">DISPARBUD LAMONGAN</a>
             </div>
           </div>
         </div>

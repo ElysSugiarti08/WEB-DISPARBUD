@@ -129,7 +129,7 @@ if( isset($_POST["ubah"]) ) {
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="./profile.php">
-              <i class="ni ni-single-02 text-yellow"></i> User profile
+              <i class="ni ni-single-02 text-yellow"></i> User Profile
             </a>
           </li>
         </ul>
@@ -184,14 +184,14 @@ if( isset($_POST["ubah"]) ) {
     </nav>
     <!-- End Navbar -->
     <!-- Header -->
-    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-size: cover; background-position: center top;">
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 400px; background-size: cover; background-position: center top;">
       <!-- Mask -->
-      <span class="mask bg-gradient-default opacity-8"></span>
+      <span class="mask bg-gradient-default opacity-10"></span>
       <!-- Header container -->
       <div class="container-fluid d-flex align-items-center">
         <div class="row">
-          <div class="col-lg-7 col-md-10">
-            <h1 class="display-2 text-white">Hello <?php echo  $_SESSION["username"]; ?></h1>
+          <div class="col-lg-12 col-md-10">
+            <h1 class="display-2 text-white"><?php echo  $_SESSION["username"]; ?> Profile</h1>
           </div>
         </div>
       </div>
