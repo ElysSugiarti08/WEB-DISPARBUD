@@ -5,7 +5,12 @@ if( !isset($_SESSION["login"]) ) {
   header("Location: ../login.php");
   exit;
 }
-require '../functions.php'
+
+require '../functions.php';
+$result = mysqli_query($conn, "SELECT users.id_user, users.username, users.email, jk.ket_jk, users.noTelp, usertype.ket_usertype
+                                FROM users, jeniskelamin as jk, usertype
+                                WHERE users.jenisKelamin = jk.id_jk and users.usertype = usertype.id_usertype");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,17 +19,17 @@ require '../functions.php'
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    Dasbor Admin
+      Dashboard Admin - Data User
   </title>
   <!-- Favicon -->
-  <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->
-  <link href="./assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
-  <link href="./assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <link href="assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="./assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
+  <link href="assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -36,7 +41,7 @@ require '../functions.php'
       </button>
       <!-- Brand -->
       <a class="navbar-brand pt-0" href="index.php">
-      <div><h2 class="text-primary">DASBOR ADMIN</h2></div>
+        <div><h2 class="text-primary">DASHBOARD ADMIN</h2></div>
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
@@ -65,7 +70,7 @@ require '../functions.php'
             </div>
             <a href="./profile.php" class="dropdown-item">
               <i class="ni ni-single-02"></i>
-              <span>My profile</span>
+              <span>My Profile</span>
             </a>
             <div class="dropdown-divider"></div>
             <a href="../logout.php" class="dropdown-item">
@@ -82,7 +87,7 @@ require '../functions.php'
           <div class="row">
             <div class="col-6 collapse-brand">
               <a href="index.php">
-                <div>DISPARBUD LAMONGAN</div>
+                <div>CREATIVO ADVERTISING</div>
               </a>
             </div>
             <div class="col-6 collapse-close">
@@ -96,20 +101,27 @@ require '../functions.php'
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item">
-          <a class=" nav-link active " href=" ./index.php"> <i class="ni ni-tv-2 text-primary"></i> Dashboard
+            <a class=" nav-link active" href=" ./index.php">
+              <i class="ni ni-tv-2 text-primary"></i> Dashboard
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link " href="./profile.php">
-              <i class="ni ni-single-02 text-yellow"></i> Admin profile
+              <i class="ni ni-single-02 text-yellow"></i> Admin Profile
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item ">
             <a class="nav-link " href="./datauser.php">
               <i class="ni ni-circle-08 text-blue"></i> Data User
             </a>
           </li>
-        
+          <li class="nav-item">
+            <a class="nav-link " href="./komenuser.php">
+              <i class="ni ni-chat-round text-blue"></i> Comments User
+            </a>
+          </li>
+         
+        </ul>
         <!-- Divider -->
         <hr class="my-3">
         <ul class="navbar-nav">
@@ -127,14 +139,14 @@ require '../functions.php'
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
         <!-- Brand -->
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.php">Dashboard</a>
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="index.php">Dashboard</a>
         <!-- User -->
         <ul class="navbar-nav align-items-center d-none d-md-flex">
           <li class="nav-item dropdown">
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="./assets/img/theme/user.png">
+                  <img alt="Image placeholder" src="assets/img/theme/user.png">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
                   <span class="mb-0 text-sm  font-weight-bold"><?php echo  $_SESSION["username"]; ?></span>
@@ -150,7 +162,7 @@ require '../functions.php'
                 <span>My profile</span>
               </a>
               <div class="dropdown-divider"></div>
-              <a href="logout.php" class="dropdown-item">
+              <a href="../logout.php" class="dropdown-item">
                 <i class="ni ni-user-run"></i>
                 <span>Logout</span>
               </a>
@@ -189,20 +201,46 @@ require '../functions.php'
                 </div>
               </div>
             </div>
-            
+          </div>
+
+          <div class="row">
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Comments</h5>
+                      <span class="h2 font-weight-bold mb-0">
+                      <?php
+                            $jml_komen = mysqli_query($conn, "SELECT * FROM  komentar");
+                            $count=mysqli_num_rows($jml_komen);
+                            echo $count;
+                        ?>
+                      </span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                        <i class="fas fa-chart-bar"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid mt--7">
+    <div class="container-fluid mt--6">
+      <!-- Table -->
       <div class="row">
-        <div class="col-xl-12 mb-8 mb-xl-0">
-          <div class="card bg-white shadow">
-            <div class="card-header bg-transparent">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-white border-0">
               <div class="row align-items-center">
                 <div class="col">
-                  <h1 class="text-gradient-default mb-0 text-center">Selamat Datang, <?php echo  $_SESSION["username"]; ?></h1>
-                  <h4 class="text-gradient-default mb-0 text-center">Selamat datang di dasbor admin DISPARBUD LAMONGAN</h4>
+                  <h1 class="text-gradient-default text-center">Selamat Datang, <?php echo  $_SESSION["username"]; ?></h1>
+                  <h4 class="text-gradient-default mb-0 text-center">Selamat Datang di Dashboard Admin DISPARBUD LAMONGAN</h4>
                 </div>
               </div>
             </div>
@@ -214,7 +252,7 @@ require '../functions.php'
         <div class="row align-items-center justify-content-xl-between">
           <div class="col-xl-6">
             <div class="copyright text-center text-xl-left text-muted">
-              &copy; 2020 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
+              &copy; 2020 <a href="../index.php" class="font-weight-bold ml-1" target="_blank">DISPARBUD LAMONGAN</a>
             </div>
           </div>
         </div>
@@ -222,13 +260,11 @@ require '../functions.php'
     </div>
   </div>
   <!--   Core   -->
-  <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
-  <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <!--   Optional JS   -->
-  <script src="./assets/js/plugins/chart.js/dist/Chart.min.js"></script>
-  <script src="./assets/js/plugins/chart.js/dist/Chart.extension.js"></script>
   <!--   Argon JS   -->
-  <script src="./assets/js/argon-dashboard.min.js?v=1.1.0"></script>
+  <script src="assets/js/argon-dashboard.min.js?v=1.1.0"></script>
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
     window.TrackJS &&

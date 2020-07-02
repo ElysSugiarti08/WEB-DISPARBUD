@@ -19,7 +19,7 @@ $result = mysqli_query($conn, "SELECT users.id_user, users.username, users.email
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-      Dasbor Admin - Data User
+      Dashboard Admin - Data User
   </title>
   <!-- Favicon -->
   <link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -41,7 +41,7 @@ $result = mysqli_query($conn, "SELECT users.id_user, users.username, users.email
       </button>
       <!-- Brand -->
       <a class="navbar-brand pt-0" href="index.php">
-        <div><h2 class="text-primary">DASBOR ADMIN</h2></div>
+        <div><h2 class="text-primary">DASHBOARD ADMIN</h2></div>
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
@@ -107,12 +107,17 @@ $result = mysqli_query($conn, "SELECT users.id_user, users.username, users.email
           </li>
           <li class="nav-item">
             <a class="nav-link " href="./profile.php">
-              <i class="ni ni-single-02 text-yellow"></i> Admin profile
+              <i class="ni ni-single-02 text-yellow"></i> Admin Profile
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link active" href="./datauser.php">
               <i class="ni ni-circle-08 text-blue"></i> Data User
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./komenuser.php">
+              <i class="ni ni-chat-round text-blue"></i> Comments User
             </a>
           </li>
          
@@ -196,7 +201,6 @@ $result = mysqli_query($conn, "SELECT users.id_user, users.username, users.email
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
@@ -206,7 +210,7 @@ $result = mysqli_query($conn, "SELECT users.id_user, users.username, users.email
       <div class="row">
         <div class="col">
           <div class="card shadow">
-          <div class="card-header bg-white border-0">
+            <div class="card-header bg-white border-0">
               <div class="row align-items-center">
                 <div class="col-8">
                   <h3 class="mb-0">Data User</h3>

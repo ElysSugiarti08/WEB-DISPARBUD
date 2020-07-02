@@ -134,6 +134,11 @@ if( isset($_POST["ubah"]) ) {
               <i class="ni ni-circle-08 text-blue"></i> Data User
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./komenuser.php">
+              <i class="ni ni-circle-08 text-blue"></i> Comments User
+            </a>
+          </li>
         </ul>
         <!-- Divider -->
         <hr class="my-3">

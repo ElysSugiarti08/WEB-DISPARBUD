@@ -3,7 +3,7 @@
 require '../functions.php';
 $id = $_GET["id"];
 
-if ( hapususer($id) > 0) {
+if (hapususer($id) > 0) {
     echo "
         <script>
             alert('user berhasil dihapus!');

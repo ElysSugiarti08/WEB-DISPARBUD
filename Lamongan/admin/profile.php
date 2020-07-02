@@ -42,7 +42,7 @@ if( isset($_POST["ubah"]) ) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    Dasbor Admin - Profile
+    Dashboard Admin - Profile
   </title>
   <!-- Favicon -->
   <link href="assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -64,7 +64,7 @@ if( isset($_POST["ubah"]) ) {
       </button>
       <!-- Brand -->
       <a class="navbar-brand pt-0" href="index.php">
-      <div><h2 class="text-primary">DASBOR ADMIN</h2></div>
+      <div><h2 class="text-primary">DASHBOARD ADMIN</h2></div>
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
@@ -93,7 +93,7 @@ if( isset($_POST["ubah"]) ) {
             </div>
             <a href="./profile.php" class="dropdown-item">
               <i class="ni ni-single-02"></i>
-              <span>My profile</span>
+              <span>My Profile</span>
             </a>
             <div class="dropdown-divider"></div>
             <a href="../logout.php" class="dropdown-item">
@@ -130,12 +130,17 @@ if( isset($_POST["ubah"]) ) {
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="./profile.php">
-              <i class="ni ni-single-02 text-yellow"></i> Admin profile
+              <i class="ni ni-single-02 text-yellow"></i> Admin Profile
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link " href="./datauser.php">
               <i class="ni ni-circle-08 text-blue"></i> Data User
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./komenuser.php">
+              <i class="ni ni-chat-round  text-blue"></i> Comments User
             </a>
           </li>
         </ul>
@@ -156,7 +161,7 @@ if( isset($_POST["ubah"]) ) {
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
         <!-- Brand -->
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./profile.php">Admin Profile</a>
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./profile.php">User Profile</a>
         <!-- User -->
         <ul class="navbar-nav align-items-center d-none d-md-flex">
           <li class="nav-item dropdown">
