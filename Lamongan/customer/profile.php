@@ -132,6 +132,11 @@ if( isset($_POST["ubah"]) ) {
               <i class="ni ni-single-02 text-yellow"></i> User Profile
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./index2.php">
+              <i class=""></i> Galery
+            </a>
+          </li>
         </ul>
         <!-- Divider -->
         <hr class="my-3">

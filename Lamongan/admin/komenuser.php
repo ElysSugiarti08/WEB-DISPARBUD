@@ -114,6 +114,11 @@ $result = mysqli_query($conn, "SELECT * FROM komentar");
             </a>
           </li>
           <li class="nav-item ">
+            <a class="nav-link " href="./form.php">
+              <i class=""></i> Upload Gambar
+            </a>
+          </li>
+          <li class="nav-item ">
             <a class="nav-link active" href="./datauser.php">
               <i class="ni ni-chat-round  text-blue"></i> Comments User
             </a>

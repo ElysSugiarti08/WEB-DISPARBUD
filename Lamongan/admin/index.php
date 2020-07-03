@@ -115,6 +115,11 @@ $result = mysqli_query($conn, "SELECT users.id_user, users.username, users.email
               <i class="ni ni-circle-08 text-blue"></i> Data User
             </a>
           </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="./form.php">
+              <i class=""></i> Upload Gambar
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link " href="./komenuser.php">
               <i class="ni ni-chat-round text-blue"></i> Comments User

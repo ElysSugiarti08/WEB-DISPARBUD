@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2020 at 05:08 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- Waktu pembuatan: 03 Jul 2020 pada 04.17
+-- Versi server: 10.1.34-MariaDB
+-- Versi PHP: 7.0.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,38 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jeniskelamin`
+-- Struktur dari tabel `gambar`
+--
+
+CREATE TABLE `gambar` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `ukuran` int(11) NOT NULL,
+  `tipe` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `gambar`
+--
+
+INSERT INTO `gambar` (`id`, `nama`, `ukuran`, `tipe`) VALUES
+(1, '1.jpg', 371577, 'image/jpeg'),
+(2, 'galer 2.jpg', 144869, 'image/jpeg'),
+(3, 'galer 3.jpg', 236284, 'image/jpeg'),
+(4, 'galer 11.jpg', 236957, 'image/jpeg'),
+(5, 'galer 11.jpg', 236957, 'image/jpeg'),
+(6, 'galer 5.jpg', 36768, 'image/jpeg'),
+(7, 'galer 5.jpg', 36768, 'image/jpeg'),
+(8, 'galer 56.jpg', 87119, 'image/jpeg'),
+(9, 'galer 57.jpg', 155657, 'image/jpeg'),
+(10, 'galer 56.jpg', 87119, 'image/jpeg'),
+(11, 'galer 66.jpg', 78511, 'image/jpeg'),
+(12, 'galer 67.jpg', 92755, 'image/jpeg');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `jeniskelamin`
 --
 
 CREATE TABLE `jeniskelamin` (
@@ -34,7 +65,7 @@ CREATE TABLE `jeniskelamin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `jeniskelamin`
+-- Dumping data untuk tabel `jeniskelamin`
 --
 
 INSERT INTO `jeniskelamin` (`id_jk`, `ket_jk`) VALUES
@@ -44,7 +75,7 @@ INSERT INTO `jeniskelamin` (`id_jk`, `ket_jk`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `komentar`
+-- Struktur dari tabel `komentar`
 --
 
 CREATE TABLE `komentar` (
@@ -54,18 +85,19 @@ CREATE TABLE `komentar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `komentar`
+-- Dumping data untuk tabel `komentar`
 --
 
 INSERT INTO `komentar` (`id_komen`, `isi_komen`, `email_komen`) VALUES
 (6, 'halo, webnya bagus, semoga semakin uwu yaaa ^ ^', 'ernasetia168@gmail.com'),
 (7, 'haloooooo', 'ernaset@gmail.com'),
-(8, 'semoga nilai kita bagus ya guys, Aamiin', 'ernaset@gmail.com');
+(8, 'semoga nilai kita bagus ya guys, Aamiin', 'ernaset@gmail.com'),
+(9, 'Bissmillah semoga dapat nilai bagus, Aamiin.\r\nSemangat rek!!', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -79,17 +111,18 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id_user`, `username`, `email`, `password`, `jenisKelamin`, `noTelp`, `usertype`) VALUES
-(21, 'erna', 'ernasetia168@gmail.com', '$2y$10$A9jkj1A9sLRRPynBC4jgSuEvC3QfKuPR2sSiS0fFqenDc3T.S37nu', 2, '085807116666', 1),
-(25, 'ernana', 'ernaset@gmail.com', '$2y$10$esr.LDjyXrYUvjgYyN5LOO.8NH5DJFU5/0O3yNK4Xi6qSJpuo2hE6', 2, '085807116666', 2);
+(25, 'ernana', 'ernaset@gmail.com', '$2y$10$esr.LDjyXrYUvjgYyN5LOO.8NH5DJFU5/0O3yNK4Xi6qSJpuo2hE6', 2, '085807116666', 2),
+(26, 'admin', 'admin@gmail.com', '$2y$10$CO7yBnI1A2MkGrlWL1ZTA.XSakMPE6413cm3DLZSW7buzXXC8LDHi', 2, '08123487656', 1),
+(27, 'elys sugiarti', 'zahraelys08@gmail.com', '$2y$10$SjfjnhfHxjZWcCCd.Ca.QOS96roVuCjD4y7s8BEvOJtAhItCNMzPi', 2, '085648363948', 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usertype`
+-- Struktur dari tabel `usertype`
 --
 
 CREATE TABLE `usertype` (
@@ -98,7 +131,7 @@ CREATE TABLE `usertype` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `usertype`
+-- Dumping data untuk tabel `usertype`
 --
 
 INSERT INTO `usertype` (`id_usertype`, `ket_usertype`) VALUES
@@ -110,19 +143,25 @@ INSERT INTO `usertype` (`id_usertype`, `ket_usertype`) VALUES
 --
 
 --
--- Indexes for table `jeniskelamin`
+-- Indeks untuk tabel `gambar`
+--
+ALTER TABLE `gambar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `jeniskelamin`
 --
 ALTER TABLE `jeniskelamin`
   ADD PRIMARY KEY (`id_jk`);
 
 --
--- Indexes for table `komentar`
+-- Indeks untuk tabel `komentar`
 --
 ALTER TABLE `komentar`
   ADD PRIMARY KEY (`id_komen`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`),
@@ -130,33 +169,39 @@ ALTER TABLE `users`
   ADD KEY `fk_usertpe` (`usertype`);
 
 --
--- Indexes for table `usertype`
+-- Indeks untuk tabel `usertype`
 --
 ALTER TABLE `usertype`
   ADD PRIMARY KEY (`id_usertype`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `komentar`
+-- AUTO_INCREMENT untuk tabel `gambar`
+--
+ALTER TABLE `gambar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT untuk tabel `komentar`
 --
 ALTER TABLE `komentar`
-  MODIFY `id_komen` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_komen` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `users`
+-- Ketidakleluasaan untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `fk_jenisKelamin` FOREIGN KEY (`jenisKelamin`) REFERENCES `jeniskelamin` (`id_jk`),
