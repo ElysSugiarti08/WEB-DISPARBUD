@@ -36,6 +36,7 @@ if( isset($_POST["login"]) ) {
 
             $iduser = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
             $baris = mysqli_fetch_assoc($iduser);
+            $_SESSION["email"] = $baris['email'];
             if ( $baris["usertype"] != 1 ) {
                 echo "<script>location.href='customer/index.php';</script>";
                 exit;
